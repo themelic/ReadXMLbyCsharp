@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ManifestMessage>
+<Header>
+	<sender>MyCompany</sender>
+	<reciever>YourCompany</reciever>
+	<timeOfDocument>2020-07-10T12:38:05.32</timeOfDocument>
+	<typeOfMessage>NEWCARGOMANIFEST</typeOfMessage>
+</Header>
+<ManifestData>
+<Company>
+	<ComanyName>Train Corp SA</ComanyName>
+	<CompanyAddress>Train Street No:1</CompanyAddress>
+	<CompanyCity>Train City</CompanyCity>
+	<Contact>
+		<Name>John Doe</Name>
+		<Phone>03211234567</Phone>
+		<Email>JohnDoe@xcorp.com</Email>
+	</Contact>
+</Company>
+<Voyage>
+	<fromCity>GBLON</fromCity>
+	<toCity>FRPAR</toCity>
+	<dateTimeOfDeparture>2020-09-09T12:38:05.32</dateTimeOfDeparture>
+	<dateTimeOfArrival>2020-09-12T12:38:05.32</dateTimeOfArrival>
+	<voyageWeek>35-20</voyageWeek>
+	<TrainID>VanDieseL-21</TrainID>
+	<crewNumber>12</crewNumber>
+</Voyage>
+<BLs>
+	<BL>
+		<number>001</number>
+		<cargoType>GENERAL CARGO</cargoType> <!-- GENERAL CARGO, DECLARED, CONTAINER, SERVICE-->
+		<BLType>WAYBILL</BLType> <!-- WAYBILL, ORIGINAL -->
+		<senderRef></senderRef> 
+		<Loading>GBLON</Loading>
+		<Unloading>FRPAR</Unloading>
+		<loadingLocation>GB</loadingLocation> <!-- 2 CHARS LOCODE STANDARD -->
+		<finalDestination>FR</finalDestination> <!-- 2 CHARS LOCODE STANDARD -->
+		<customer>
+			<eori>GBFR0000234234235</eori>
+			<ref>XCP</ref>
+			<name>MYCOMPANY CORP SA</name>
+			<address></address>
+			<city></city>
+			<zip></zip>
+			<country>FR</country>
+		</customer>
+		<shipper>
+			<eori>GBFR0000234234235</eori>
+			<ref>XCP</ref>
+			<name>MYCOMPANY CORP SA</name>
+			<address></address>
+			<city></city>
+			<zip></zip>
+			<country>FR</country>
+		</shipper>
+		<consegnee>
+			<eori>GBFR0000232334234</eori>
+			<ref>FRM</ref>
+			<name>SOMEOTHER CORP A.S.</name>
+			<address></address>
+			<city></city>
+			<zip></zip>
+			<country>FR</country>
+		</consegnee>
+		<notify>
+			<name>SAME AS CONSIGNEE</name>
+		</notify>
+		<remarks>NOTE NOTE NOTE</remarks>
+		<freightCurrency>EUR</freightCurrency>
+		<freightRemarks>FREE IN/OUT</freightRemarks>
+		<prepaid>0.0</prepaid>
+		<collect>450.00</collect>
+		<units>
+			<unit>
+				<bookingNumber>112238AAJJ</bookingNumber>
+				<unitID>G3AK25</unitID>
+				<unitType>T100</unitType> <!-- to be agreed a list of code, we have the local TRS Standard-->
+				<ILUCode>EEG1234567</ILUCode>
+				<tareWeight>7500.00</tareWeight>
+				<isEmpty>0</isEmpty>
+				<isDangerous>1</isDangerous>
+				<loadededOnto></loadededOnto>
+				<tractedBy></tractedBy>
+				<isFrigo>0</isFrigo>
+				<isPlugged>0</isPlugged>
+				<isDieselFrigo>0</isDieselFrigo>
+				<seal></seal>
+				<eseal>1234567</eseal>
+				<remarks>SEALED WITH IOT</remarks>
+				<damageRemarks>Dented in several places</damageRemarks>
+				<Goods>
+					<goodItem>
+						<cusDocType>T2</cusDocType>
+						<cusDocTypeNr>20FR09098765678909</cusDocTypeNr>
+						<codsDocDate>09/09/2020</codsDocDate>
+						<weight>1540.050</weight>
+						<pkNumber>45</pkNumber>
+						<commodity>TEXTILE PRODUCTS</commodity>
+						<HSCode>670900</HSCode>							
+					</goodItem>
+					<goodItem>
+						<cusDocType>T2</cusDocType>
+						<cusDocTypeNr>20FR09098765678922</cusDocTypeNr>
+						<codsDocDate>09/09/2020</codsDocDate>
+						<weight>12240.234</weight>
+						<pkNumber>97</pkNumber>
+						<commodity>TEXTILE PRODUCTS</commodity>
+						<HSCode>670900</HSCode>							
+					</goodItem>
+				</Goods>
+				<DangerousGoods>
+					<sourcePosition/>
+					<unNumber>1289</unNumber>
+					<goodsClass>3</goodsClass>
+					<technicalName>SO TEHCNICAL</technicalName>
+					<subsidiaryRisks>8</subsidiaryRisks>
+					<packingGroup>III</packingGroup>
+					<flashPoint>>+23°C</flashPoint>
+					<empty>true</empty>
+					<packagesNumber>1</packagesNumber>
+					<packageTypeCode/>
+					<specialPacking>true</specialPacking>
+					<specialPackingType>TANK</specialPackingType>
+					<netWeight>4520</netWeight>
+					<grossWeight>4550</grossWeight>
+					<um>KG</um>
+					<containerProperties>CHEMICAL</containerProperties>
+					<emergencyContact>JOHN DOE FRANCE +3211231212</emergencyContact>
+				</DangerousGoods>
+			</unit>
+		</units>
+	</BL>		
+	<BL>
+		<number>002</number>
+		<cargoType>GENERAL CARGO</cargoType> <!-- GENERAL CARGO, DECLARED, CONTAINER, SERVICE-->
+		<BLType>WAYBILL</BLType> <!-- WAYBILL, ORIGINAL -->
+		<senderRef></senderRef> 
+		<Loading>GBLON</Loading>
+		<Unloading>FRPAR</Unloading>
+		<loadingLocation>GB</loadingLocation> <!-- 2 CHARS LOCODE STANDARD -->
+		<finalDestination>FR</finalDestination> <!-- 2 CHARS LOCODE STANDARD -->
+		<customer>
+			<eori>GBFR0000234234235</eori>
+			<ref>XCP</ref>
+			<name>MYCOMPANY CORP SA</name>
+			<address></address>
+			<city></city>
+			<zip></zip>
+			<country>FR</country>
+		</customer>
+		<shipper>
+			<eori>GBFR0000234234235</eori>
+			<ref>XCP</ref>
+			<name>MYCOMPANY CORP SA</name>
+			<address></address>
+			<city></city>
+			<zip></zip>
+			<country>FR</country>
+		</shipper>
+		<consegnee>
+			<eori>GBFR0000232334234</eori>
+			<ref>FRM</ref>
+			<name>SOMEOTHER CORP A.S.</name>
+			<address></address>
+			<city></city>
+			<zip></zip>
+			<country>FR</country>
+		</consegnee>
+		<notify>
+			<name>SAME AS CONSIGNEE</name>
+		</notify>
+		<remarks>NOTE NOTE NOTE</remarks>
+		<freightCurrency>EUR</freightCurrency>
+		<freightRemarks>FREE IN/OUT</freightRemarks>
+		<prepaid>0.0</prepaid>
+		<collect>450.00</collect>
+		<units>
+			<unit>
+				<bookingNumber>123FDF1231</bookingNumber>
+				<unitID>GF445B</unitID>
+				<unitType>T100</unitType> <!-- to be agreed a list of code, we have the local TRS Standard-->
+				<ILUCode>EEG1234567</ILUCode>
+				<tareWeight>7500.00</tareWeight>
+				<isEmpty>0</isEmpty>
+				<isDangerous>1</isDangerous>
+				<loadededOnto></loadededOnto>
+				<tractedBy></tractedBy>
+				<isFrigo>0</isFrigo>
+				<isPlugged>0</isPlugged>
+				<isDieselFrigo>0</isDieselFrigo>
+				<seal></seal>
+				<eseal>1234567</eseal>
+				<remarks>SEALED WITH IOT</remarks>
+				<damageRemarks>Dented in several places</damageRemarks>
+				<Goods>
+					<goodItem>
+						<cusDocType>T2</cusDocType>
+						<cusDocTypeNr>20FR09098765678909</cusDocTypeNr>
+						<codsDocDate>09/09/2020</codsDocDate>
+						<weight>5540.050</weight>
+						<pkNumber>45</pkNumber>
+						<commodity>APPLES</commodity>
+						<HSCode>423452</HSCode>							
+					</goodItem>
+				</Goods>
+			</unit>
+		</units>
+	</BL>		
+	<BL>
+		<number>D001</number>
+		<cargoType>GENERAL CARGO</cargoType> <!-- GENERAL CARGO, DECLARED, CONTAINER, SERVICE-->
+		<BLType>WAYBILL</BLType> <!-- WAYBILL, ORIGINAL -->
+		<senderRef></senderRef> 
+		<Loading>GBLON</Loading>
+		<Unloading>FRPAR</Unloading>
+		<loadingLocation>GB</loadingLocation> <!-- 2 CHARS LOCODE STANDARD -->
+		<finalDestination>FR</finalDestination> <!-- 2 CHARS LOCODE STANDARD -->
+		<customer>
+			<eori>GBFR00001234123</eori>
+			<ref>TIP</ref>
+			<name>XCOMPANY CORP SA</name>
+			<address></address>
+			<city></city>
+			<zip></zip>
+			<country>BE</country>
+		</customer>
+		<shipper>
+			<eori>GBFR00001234123</eori>
+			<ref>TIP</ref>
+			<name>XCOMPANY CORP SA</name>
+			<address></address>
+			<city></city>
+			<zip></zip>
+			<country>BE</country>
+		</shipper>
+		<consegnee>
+			<eori>GBFR00001234123</eori>
+			<ref>TIP</ref>
+			<name>XCOMPANY CORP SA</name>
+			<address></address>
+			<city></city>
+			<zip></zip>
+			<country>BE</country>
+		</consegnee>
+		<notify>
+			<name>SAME AS CONSIGNEE</name>
+		</notify>
+		<remarks>NOTE NOTE NOTE</remarks>
+		<freightCurrency>EUR</freightCurrency>
+		<freightRemarks>FREE IN/OUT</freightRemarks>
+		<prepaid>1230.0</prepaid>
+		<collect>0.00</collect>
+		<units>
+			<unit>
+				<bookingNumber>22DF2F23</bookingNumber>
+				<unitID>GIRK4752</unitID>
+				<unitType>C100</unitType> <!-- to be agreed a list of code, we have the local TRS Standard-->
+				<unitType>C100</unitType> <!-- to be agreed a list of code, we have the local TRS Standard-->
+				<tareWeight>14500.00</tareWeight>
+				<isEmpty>0</isEmpty>
+				<isDangerous>0</isDangerous>
+				<loadededOnto></loadededOnto>
+				<tractedBy>T4EF67</tractedBy>
+				<isFrigo>1</isFrigo>
+				<isPlugged>1</isPlugged>
+				<isDieselFrigo>0</isDieselFrigo>
+				<temperature>12</temperature>
+				<seal></seal>
+				<eseal></eseal>
+				<remarks>PIF</remarks>
+				<damageRemarks>Dented in several places</damageRemarks>
+				<Goods>
+				<goodItem>
+					<weight>18740.050</weight>
+					<pkNumber>20</pkNumber>
+					<commodity>APPLES</commodity>
+					<HSCode>100900</HSCode>							
+				</goodItem>
+				</Goods>
+			</unit>
+		</units>
+	</BL>			
+</BLs>
+</ManifestData>	
+</ManifestMessage>
