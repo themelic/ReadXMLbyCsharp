@@ -116,7 +116,7 @@
 					<technicalName>SO TEHCNICAL</technicalName>
 					<subsidiaryRisks>8</subsidiaryRisks>
 					<packingGroup>III</packingGroup>
-					<flashPoint>>+23°C</flashPoint>
+					<flashPoint>>+23C</flashPoint>
 					<empty>true</empty>
 					<packagesNumber>1</packagesNumber>
 					<packageTypeCode/>
