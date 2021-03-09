@@ -15,7 +15,7 @@ using System.IO;
 
 
 
-namespace Samer_Import_Export
+namespace Import_Export
 {
 
     public partial class Form1 : Form
