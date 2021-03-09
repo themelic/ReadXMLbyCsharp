@@ -15,7 +15,7 @@ using System.IO;
 
 
 
-namespace Import_Export
+namespace Samer_Import_Export
 {
 
     public partial class Form1 : Form
@@ -43,10 +43,9 @@ namespace Import_Export
             //Loading XMLDocument object
             //_doc.Load(Globals.fileNameText);
 
-
             var _doc = XDocument.Load(Globals.fileNameText);
 
-            foreach (var childElem in _doc.Elements("CargoManifestMessage"))
+            foreach (var childElem in _doc.Elements("ManifestMessage"))
             {
                 foreach (var child in childElem.Elements("Header"))
                 {
@@ -60,11 +59,11 @@ namespace Import_Export
                     txtSender.Text = child.Element("sender").Value ;
                     txtReciever.Text = child.Element("reciever").Value;
                     txtMessage.Text = child.Element("typeOfMessage").Value;
-                    txtDateTime.Text = child.Element("timeOfMessage").Value;
+                    txtDateTime.Text = child.Element("timeOfDocument").Value;
                 }
 
                 
-                foreach (var child in childElem.Elements("CargoManifestData"))
+                foreach (var child in childElem.Elements("ManifestData"))
                 {
                     foreach(var x in child.Elements())
                     {
@@ -72,11 +71,11 @@ namespace Import_Export
 
                         switch (checkName)
                         {
-                            case "Vessel":
-                                Globals.Vessels.Clear();
+                            case "Company":
+                                Globals.Companys.Clear();
                                 foreach (var y in x.Elements())
                                 {
-                                    Globals.Vessels.Add(y.Name.ToString(), y.Value.ToString());
+                                    Globals.Companys.Add(y.Name.ToString(), y.Value.ToString());
                                 }
                                 break;
                             case "Voyage":
@@ -131,7 +130,7 @@ namespace Import_Export
                     //Globals.tmpHeadVal = Globals.tmpHeadVal + "," + headerVal.Value;
                     //dataGridView1.Columns[dg].Name = headerVal.Key;
                 }
-                foreach (var x in Globals.Vessels)
+                foreach (var x in Globals.Companys)
                 {
                     Globals.data.Add(x.Key, x.Value);
     
@@ -180,7 +179,7 @@ namespace Import_Export
             public static string fileNameText { get; set; }
 
             public static IDictionary<string, string> Headers = new Dictionary<string, string>();
-            public static IDictionary<string, string> Vessels = new Dictionary<string, string>();
+            public static IDictionary<string, string> Companys = new Dictionary<string, string>();
             public static IDictionary<string, string> Voyages = new Dictionary<string, string>();
             public static IDictionary<string, string> BLs = new Dictionary<string, string>();
             public static IDictionary<string, string> BL = new Dictionary<string, string>();
@@ -190,12 +189,35 @@ namespace Import_Export
             public static IDictionary<string, string> DangerousGoods = new Dictionary<string, string>();
             public static IDictionary<string, string> Passengers = new Dictionary<string, string>();
 
+
+
+
+
+
             public static IDictionary<string, string> data = new Dictionary<string, string>();
             public static IDictionary<string, string> bldata = new Dictionary<string, string>(); 
 
 
             public static string[] row ;
           
+            /*
+            IDictionary<int, string> xnumberNames = new Dictionary<int, string>();
+            public static IDictionary<string, string> ManifestNo(String message)
+            {
+                //another new instance of the dictionary is created!!
+                IDictionary<string, string> new_Data = new Dictionary<string, string>();
+                new_Data["NET_MSG"] = message;
+                new_Data["IP"] = get_IP();
+                new_Data["HOST"] = get_host();
+
+                return new_ping;
+             }
+             */
+
+
+            //public const Int32 BUFFER_SIZE = 512; // Unmodifiable
+            //public static String FILE_NAME = "Output.txt"; // Modifiable
+            //public static readonly String CODE_PREFIX = "US-"; // Unmodifiable
         }
 
         private void btFillGrid_Click_1(object sender, EventArgs e)
@@ -206,7 +228,7 @@ namespace Import_Export
                 dataGridView1.Rows.Clear();
                 dataGridView1.Refresh();
 
-            dataGridView1.ColumnCount = Globals.Headers.Count + Globals.Vessels.Count + Globals.Voyages.Count;
+            dataGridView1.ColumnCount = Globals.Headers.Count + Globals.Companys.Count + Globals.Voyages.Count;
 
             int cols = 0;
             foreach (var y in Globals.data)
@@ -218,8 +240,12 @@ namespace Import_Export
             //this.dataGridView1.DataSource = Globals.data.Values.ToList();
         
             }
+
+
             dataGridView2.Rows.Clear();
             dataGridView2.Refresh();
+
+                
 
             dataGridView2.ColumnCount = Globals.data.Count;
             int colx = 0;
