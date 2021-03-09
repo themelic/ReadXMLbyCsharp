@@ -1,4 +1,4 @@
-namespace Samer_Import_Export
+namespace Import_Export
 {
     partial class Form1
     {
