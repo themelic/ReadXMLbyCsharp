@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace Samer_Import_Export
+namespace Import_Export
 {
     static class Program
     {
